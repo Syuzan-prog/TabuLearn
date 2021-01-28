@@ -1,0 +1,29 @@
+@import "../../styles/root";
+
+.registration-block {
+  padding-top: 96px;
+  width: 500px;
+  background: #ffffff;
+  border-radius: 30px;
+  padding: 53px 40px 38px;
+  .registration-title {
+    @include tabuLearn-h2;
+  }
+  .registration-text {
+    padding: 15px 50px 25px;
+    @include tabuLearn-h3;
+  }
+  .registration-label {
+    @include label-style();
+    .registration-label-span {
+      @include label-span-style();
+    }
+  }
+  .registration-input {
+    @include input-styles();
+  }
+  .registration-button {
+    @include button-styles();
+    margin-top: 10px;
+  }
+}

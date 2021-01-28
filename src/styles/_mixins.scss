@@ -1,0 +1,100 @@
+@import "./colors";
+@import "./variables";
+
+// @mixin media($breakpoint) {
+//   $value: map-get($breakPoints, $breakpoint);
+
+//   @if $value !=null {
+//     $start: map-get($value, start);
+//     $end: map-get($value, end);
+
+//     @if $start==null {
+//       @media (max-width: $end) {
+//         @content;
+//       }
+//     } @else if $end==null {
+//       @media (min-width: $start) {
+//         @content;
+//       }
+//     } @else {
+//       @media (min-width: $start) and (max-width: $end) {
+//         @content;
+//       }
+//     }
+//   } @else {
+//     @warn "Invalid breakpoint `#{$breakpoint}`.";
+//   }
+// }
+
+// %handle-text-overflow {
+//   word-break: break-all;
+//   max-width: 280px;
+//   @include media(mobile) {
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+//     max-width: 208px;
+//   }
+// }
+
+%flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin input-styles($width: 100%) {
+  width: $width;
+  height: 60px;
+  border-radius: 10px;
+  font-size: $font-size-form;
+  line-height: 22px;
+  font-family: $font-famili;
+  font-size: 14px;
+  line-height: $line-height-form;
+  letter-spacing: 0.015em;
+  color: $input-text-color;
+  padding-left: 25px;
+  margin-bottom: 30px;
+}
+
+@mixin button-styles($width: 100%) {
+  line-height: $line-height-form;
+  width: $width;
+  height: 60px;
+  background: $button-bg-disabled;
+  border-radius: 10px;
+  color: $surface-color;
+  font-family: $font-famili;
+  font-size: $font-size-form;
+}
+
+@mixin label-style() {
+  font-family: $font-famili;
+  line-height: $line-height-form;
+  font-size: $font-size-form;
+  color: $input-label-color;
+}
+
+@mixin label-span-style() {
+  font-size: $body-text;
+  color: $input-label-span-color;
+  margin-bottom: 9px;
+  margin-right: 11px;
+}
+
+@mixin tabuLearn-h2() {
+  font-family: $font-famili;
+  font-size: $intro-text;
+  text-align: center;
+  letter-spacing: 0.015em;
+  color: $text-color-black;
+  font-weight: 800;
+}
+
+@mixin tabuLearn-h3() {
+  font-family: $font-famili;
+  font-size: $intro-text;
+  text-align: center;
+  letter-spacing: 0.015em;
+  color: $text-color-grey;
+}
