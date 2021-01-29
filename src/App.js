@@ -4,22 +4,25 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import { PersonalDataContainer } from "./components/personal-data";
 import { CompanyDetailsContainer } from "./components/company-details";
+import { PasswordContainer } from "./components/password";
 
 
 class App extends React.Component {
-  render(){
-
+  render() {
     return (
       <>
         <Router>
           <div>
-            <nav>
-              <ul>
-                <li>
+            <nav >
+              <ul className="d-flex">
+                <li className="nav-link">
                   <Link to="/components/personal-data">Person</Link>
                 </li>
-                <li>
+                <li className="nav-link">
                   <Link to="/components/company-details">company</Link>
+                </li>
+                <li className="nav-link">
+                  <Link to="/components/password">password</Link>
                 </li>
               </ul>
             </nav>
@@ -30,12 +33,15 @@ class App extends React.Component {
               <Route path="/components/company-details">
                 <CompanyDetailsContainer />
               </Route>
+              <Route path="/components/password">
+                <PasswordContainer />
+              </Route>
             </Switch>
           </div>
         </Router>
       </>
     );
   }
-};
+}
 
 export default App;

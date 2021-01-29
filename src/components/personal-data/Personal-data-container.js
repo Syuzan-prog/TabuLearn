@@ -2,8 +2,6 @@ import React from "react";
 
 import PersonalData from "./Personal-data";
 
-import "./personal-data.scss";
-
 class PersonalDataContainer extends React.Component {
   render() {
     return (

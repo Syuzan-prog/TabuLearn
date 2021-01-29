@@ -1,6 +1,8 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
 
+import "./styles";
+
 export const CompanyDetails = () => {
   return (
     <div className="company-details-block">

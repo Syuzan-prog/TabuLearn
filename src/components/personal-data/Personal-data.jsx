@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
 
-import "./personal-data.scss";
+import "./styles";
 
 const PersonalData = (props) => {
   return (

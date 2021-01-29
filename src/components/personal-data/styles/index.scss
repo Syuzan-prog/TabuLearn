@@ -1,33 +1,34 @@
-@import "../../styles/root";
+@import "../../../styles/root";
 
-.company-details-containers {
+.personal-data-containers{
   @extend %flex-center-center;
   background: rgb(230, 230, 235);
   padding-top: 90px;
+
 }
-.company-details-block {
+.personal-data-block {
   padding-top: 96px;
   width: 500px;
   background: #ffffff;
   border-radius: 30px;
   padding: 53px 40px 38px;
-  .company-details-title {
+  .personal-data-title {
     @include tabuLearn-h2;
   }
-  .company-details-text {
-    padding: 15px 0 25px;
+  .personal-data-text {
+    padding: 15px 50px 25px;
     @include tabuLearn-h3;
   }
-  .company-details-label {
+  .personal-data-label {
     @include label-style();
-    .company-details-label-span {
+    .personal-data-label-span {
       @include label-span-style();
     }
   }
-  .company-details-input {
+  .personal-data-input {
     @include input-styles();
   }
-  .company-details-button {
+  .personal-data-button {
     @include button-styles();
     margin-top: 10px;
   }

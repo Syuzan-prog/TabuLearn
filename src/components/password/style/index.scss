@@ -1,0 +1,34 @@
+@import "../../../styles/root";
+
+.password-containers {
+  @extend %flex-center-center;
+  background: rgb(230, 230, 235);
+  padding-top: 90px;
+}
+.password-block {
+  padding-top: 96px;
+  width: 500px;
+  background: #ffffff;
+  border-radius: 30px;
+  padding: 53px 40px 38px;
+  .password-title {
+    @include tabuLearn-h2;
+  }
+  .password-text {
+    padding: 15px 0 25px;
+    @include tabuLearn-h3;
+  }
+  .password-label {
+    @include label-style();
+    .password-label-span {
+      @include label-span-style();
+    }
+  }
+  .password-input {
+    @include input-styles();
+  }
+  .password-button {
+    @include button-styles();
+    margin-top: 10px;
+  }
+}
