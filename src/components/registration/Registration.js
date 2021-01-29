@@ -45,7 +45,7 @@ const Registration = (props) => {
             placeholder="you@example.com"
           />
         </FormGroup>
-        <Button className="registration-button">Submit</Button>
+        <Button className="registration-button">Continue</Button>
       </Form>
     </div>
   );
