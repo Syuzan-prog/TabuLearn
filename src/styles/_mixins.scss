@@ -66,6 +66,7 @@
   color: $surface-color;
   font-family: $font-famili;
   font-size: $font-size-form;
+  border: none;
 }
 
 @mixin label-style() {

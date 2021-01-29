@@ -1,5 +1,11 @@
 @import "../../styles/root";
 
+.registration-containers{
+  @extend %flex-center-center;
+  background: rgb(230, 230, 235);
+  padding-top: 90px;
+
+}
 .registration-block {
   padding-top: 96px;
   width: 500px;
