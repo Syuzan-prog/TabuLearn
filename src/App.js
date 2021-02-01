@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import PersonalData from "./components/personalData";
-import Password from "./components/password";
 import CompanyDetails from "./components/CompanyDetails";
+import Password from "./components/password";
 
 class App extends React.Component {
   render() {
