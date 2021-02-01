@@ -8,11 +8,7 @@
 }
 
 .personalDataBlock {
-  padding-top: 96px;
-  width: 500px;
-  background: #ffffff;
-  border-radius: 30px;
-  padding: 53px 40px 38px;
+  @include blockStyle($width: 500px, $padding:53px 40px 38px);
 
   .personalDataTitle {
     @include tabuLearnH2;
