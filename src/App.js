@@ -2,10 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import { PersonalDataContainer } from "./components/personal-data";
-import { CompanyDetailsContainer } from "./components/company-details";
-import { PasswordContainer } from "./components/password";
-
+import PersonalData from "./components/personalData";
+import Password from "./components/password";
+import CompanyDetails from "./components/CompanyDetails";
 
 class App extends React.Component {
   render() {
@@ -16,10 +15,10 @@ class App extends React.Component {
             <nav >
               <ul className="d-flex">
                 <li className="nav-link">
-                  <Link to="/components/personal-data">Person</Link>
+                  <Link to="/components/PersonalData">Person</Link>
                 </li>
                 <li className="nav-link">
-                  <Link to="/components/company-details">company</Link>
+                  <Link to="/components/CompanyDetails">company</Link>
                 </li>
                 <li className="nav-link">
                   <Link to="/components/password">password</Link>
@@ -27,14 +26,14 @@ class App extends React.Component {
               </ul>
             </nav>
             <Switch>
-              <Route path="/components/personal-data">
-                <PersonalDataContainer />
+              <Route path="/components/PersonalData">
+                <PersonalData />
               </Route>
-              <Route path="/components/company-details">
-                <CompanyDetailsContainer />
+              <Route path="/components/CompanyDetails">
+                <CompanyDetails/>
               </Route>
               <Route path="/components/password">
-                <PasswordContainer />
+                <Password />
               </Route>
             </Switch>
           </div>

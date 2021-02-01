@@ -1,1 +1,3 @@
-export { default as PasswordContainer } from "./Password-container.js";
+import {Password} from "./Password";
+
+export default Password;

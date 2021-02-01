@@ -1,0 +1,42 @@
+@import "../../styles/root";
+
+.personalDataContainers {
+  @extend %flexCenterCenter;
+  background: rgb(230, 230, 235);
+  padding-top: 90px;
+
+}
+
+.personalDataBlock {
+  padding-top: 96px;
+  width: 500px;
+  background: #ffffff;
+  border-radius: 30px;
+  padding: 53px 40px 38px;
+
+  .personalDataTitle {
+    @include tabuLearnH2;
+  }
+
+  .personalDataText {
+    padding: 15px 50px 25px;
+    @include tabuLearnH3;
+  }
+
+  .personalDataLabel {
+    @include labelStyle();
+
+    .personalDataLabelSpan {
+      @include labelSpanStyle();
+    }
+  }
+
+  .personalDataInput {
+    @include inputStyles();
+  }
+
+  .personalDataButton {
+    @include buttonStyles();
+    margin-top: 10px;
+  }
+}

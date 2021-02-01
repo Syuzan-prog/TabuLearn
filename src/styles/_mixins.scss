@@ -36,13 +36,13 @@
 //   }
 // }
 
-%flex-center-center {
+%flexCenterCenter {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-@mixin input-styles($width: 100%) {
+@mixin inputStyles($width: 100%) {
   width: $width;
   height: 60px;
   border-radius: 10px;
@@ -57,7 +57,7 @@
   margin-bottom: 30px;
 }
 
-@mixin button-styles($width: 100%) {
+@mixin buttonStyles($width: 100%) {
   line-height: $line-height-form;
   width: $width;
   height: 60px;
@@ -69,21 +69,21 @@
   border: none;
 }
 
-@mixin label-style() {
+@mixin labelStyle() {
   font-family: $font-famili;
   line-height: $line-height-form;
   font-size: $font-size-form;
   color: $input-label-color;
 }
 
-@mixin label-span-style() {
+@mixin labelSpanStyle() {
   font-size: $body-text;
   color: $input-label-span-color;
   margin-bottom: 9px;
   margin-right: 11px;
 }
 
-@mixin tabuLearn-h2() {
+@mixin tabuLearnH2() {
   font-family: $font-famili;
   font-size: $intro-text;
   text-align: center;
@@ -92,7 +92,7 @@
   font-weight: 800;
 }
 
-@mixin tabuLearn-h3() {
+@mixin tabuLearnH3() {
   font-family: $font-famili;
   font-size: $intro-text;
   text-align: center;
