@@ -1,27 +1,60 @@
 {
-  "name": "react-percel",
-  "version": "1.0.0",
-  "main": "index.js",
+  "license": "MIT",
   "scripts": {
-    "start": "parcel public/index.html --open",
-    "build": "parcel public/index.html"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "node-sass": "^4.14.1",
-    "parcel-bundler": "^1.12.4"
+    "start": "cross-env NODE_ENV=development parcel public/index.html ",
+    "build": "cross-env NODE_ENV=production parcel build public/index.html --no-minify --public-url /"
   },
   "dependencies": {
-    "bootstrap": "^4.6.0",
-    "components": "^0.1.0",
-    "react": ">=16.3.0",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "autoprefixer": "^9.4.7",
+    "babel-plugin-jsx-control-statements": "^4.0.0",
+    "babel-preset-react-app": "^7.0.1",
+    "parcel-bundler": "latest",
+    "react": ">=16.8.0",
     "react-bootstrap": "^1.4.3",
-    "react-dom": ">=16.3.0",
-    "react-redux": "^7.2.2",
-    "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0",
-    "reactstrap": "^8.9.0",
-    "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0"
+    "react-dom": ">=16.8.0",
+    "react-router-dom": "^4.3.1"
+  },
+  "devDependencies": {
+    "babel-plugin-react-css-modules": "^5.0.0",
+    "cross-env": "^5.1.1",
+    "postcss": "^7.0.14",
+    "postcss-modules": "^1.4.1",
+    "prettier": "^1.16.4",
+    "sass": "^1.32.6"
+  },
+  "babel": {
+    "plugins": [
+      "babel-plugin-jsx-control-statements",
+      [
+        "babel-plugin-react-css-modules",
+        {
+          "generateScopedName": "[path]_[name]_[local]",
+          "handleMissingStyleName": "warn"
+        }
+      ]
+    ],
+    "presets": [
+      "@babel/preset-env",
+      "babel-preset-react-app"
+    ]
+  },
+  "postcss": {
+    "modules": true,
+    "plugins": {
+      "autoprefixer": {
+        "grid": true
+      },
+      "postcss-modules": {
+        "generateScopedName": "[path]_[name]_[local]"
+      }
+    }
   }
 }
