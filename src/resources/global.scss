@@ -1,17 +1,48 @@
 body {
-  font-family: "Roboto-Regular", Fallback, sans-serif;
+  font-family: "Inter-Regular", Fallback, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100vw;
   overflow-x: hidden;
 }
 
+.lock-scroll {
+  overflow: hidden;
+}
+
+.app-toast-container {
+  width: unset;
+  min-width: 320px;
+}
+
+@media only screen and (max-width: 480px) {
+  .app-toast-container {
+    bottom: 2em;
+    width: 100%;
+    min-width: 320px;
+  }
+}
+
+.Toastify__toast {
+  color: #fff;
+  border-radius: 4px;
+}
+.Toastify__toast--info {
+  background-color: #ff8a65;
+}
+.Toastify__toast--success {
+  background-color: #3caea3;
+}
+.Toastify__toast--error {
+  background-color: #d84e4e;
+}
+
 @font-face {
-  font-family: "Roboto-Regular";
-  src: url("./fonts/Roboto-Regular.ttf");
+  font-family: "Inter Regular";
+  src: url("./fonts/Inter-Regular.ttf");
   /* IE9 Compat Modes */
-  // src: url("./fonts/Roboto-Regular.woff2") format("woff2"),
-  // /* Super Modern Browsers */ url("./fonts/Roboto-Regular.woff2") format("truetype");
+  src: url("./fonts/Inter-Regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("./fonts/Inter-Regular.woff2") format("truetype");
   /* Safari, Android, iOS */
 }
 
