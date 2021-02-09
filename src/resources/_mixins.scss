@@ -50,23 +50,21 @@
   z-index: 2;
 }
 
-@mixin blockStyle($width: 408px, $padding:53px 40px 38px) {
+@mixin blockStyle($width: 408px, $padding:42px 64px 68px) {
   width: $width;
   background: #ffffff;
-  border-radius: 30px;
   padding: $padding;
 }
 
 @mixin inputStyles($width: 100%) {
   width: $width;
-  height: 60px;
   border-radius: 10px;
   font-size: $font-size-form;
   line-height: 22px;
   font-family: $font-family;
   font-size: 14px;
   line-height: $line-height-form;
-  letter-spacing: 0.015em;
+  letter-spacing: $letter-spacing;
   color: $input-text-color;
   padding-left: 20px;
   margin-bottom: 30px;
@@ -75,41 +73,25 @@
 @mixin buttonStyles($width: 100%) {
   line-height: $line-height-form;
   width: $width;
-  height: 60px;
-  background: $button-bg-disabled;
-  border-radius: 10px;
-  color: $surface-color;
+  letter-spacing: 0.46px;
+  height: 45px;
   font-family: $font-family;
   font-size: $font-size-form;
   border: none;
 }
 
-@mixin labelStyle() {
-  font-family: $font-family;
-  line-height: $line-height-form;
-  font-size: $font-size-form;
-  color: $input-label-color;
-}
-
-@mixin labelSpanStyle() {
-  font-size: $body-text;
-  color: $input-label-span-color;
-  margin-bottom: 9px;
-  margin-right: 11px;
-}
-
 @mixin title() {
   font-family: $font-family;
   font-size: $intro-text;
-  letter-spacing: 0.015em;
+  letter-spacing: $letter-spacing;
   color: $text-color-black;
   font-weight: 500;
 }
 
-@mixin text() {
+@mixin text($letter-spacing:0.015em,$font-size) {
   font-family: $font-family;
-  font-size: $intro-text;
+  font-size: $font-size;
   letter-spacing: 0.015em;
   color: $text-color-grey;
-  letter-spacing: 0.015em;
+  letter-spacing: $letter-spacing;
 }

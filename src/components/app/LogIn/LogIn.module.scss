@@ -1,0 +1,46 @@
+@import "../../../resources/root";
+
+.containers {
+  @extend %flexCenterCenter;
+  height: 100vh;
+
+  .block {
+    @include blockStyle($padding: 42px 64px 68px);
+
+    .title {
+      @include title();
+    }
+
+    .text {
+      @include text($letter-spacing:0.4px , $font-size:14px);
+      font-weight: 500;
+      margin-bottom: 37px;
+    }
+
+    a {
+      color: $focus-color;
+    }
+
+    .input ,.passwordInput{
+      width: 100%;
+    }
+
+    .marginLink {
+      margin: 30px 0 10px;
+      text-align: right;
+      font-size: $micro-text;
+    }
+    
+    .marginChackbox {
+      margin: 20px 0;
+      .colorheckbox {
+        color: $focus-color;
+      }
+    }
+
+    .button {
+      @include buttonStyles();
+      margin-top: 10px;
+    }
+  } 
+}
