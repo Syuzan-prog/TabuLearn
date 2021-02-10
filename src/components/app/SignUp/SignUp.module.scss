@@ -2,8 +2,6 @@
 
 .containers {
   @extend %flexCenterCenter;
-  height: 100vh;
-
   .block {
     @include blockStyle($width: 720px, $padding: 42px 64px 30px);
 
@@ -12,32 +10,29 @@
     }
 
     .text {
-      @include text($letter-spacing:0.4px , $font-size:14px);
+      @include text($letter-spacing: 0.4px);
       margin-bottom: 35px;
-      
     }
-    .textIncorrect{
-      @include text($letter-spacing:0.4px , $font-size:12px);
+    .textIncorrect {
+      @include text($letter-spacing: 1px, $font-size: 12px);
       margin-top: 3px;
     }
     a {
       color: $focus-color;
     }
-    .marginTop{
+    .marginTop {
       margin-top: 24px;
     }
     .padding {
       padding: 22px;
     }
 
-    .input,
-    .passwordInput {
+    .input {
       width: 100%;
     }
 
     .button {
-      @include buttonStyles($width:280px);
-      
+      @include buttonStyles($width: 280px);
     }
   }
 }

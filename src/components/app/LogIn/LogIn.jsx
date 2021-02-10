@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Grid,
-  Paper,
-  Typography,
-  Link,
-  Container,
-  Box,
-} from "@material-ui/core";
+import { Grid, Typography, Link } from "@material-ui/core";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 
@@ -14,61 +7,63 @@ import { GeneralButton } from "../../common/GeneralButton";
 import { GeneralInput } from "../../common/GeneralInput";
 import { GenPassInput } from "../../common/GenPassInput";
 
-import style from "./LogIn.module.scss";
+import globalStyles from "../../../resources/index";
+import styles from "./LogIn.module.scss";
+import { NavLink } from "react-router-dom";
 
 const LogIn = () => {
   return (
-    <Container>
-      <Box className={style.containers}>
-        <Paper elevation={2} className={style.block}>
-          <Grid align="center">
-            <h2 className={style.title}>Sign In</h2>
-            <Typography className={style.text}>
-              Don’t have an account?{" "}
-              <Link href="#" id="createAccount">
-                Create
-              </Link>
-            </Typography>
-          </Grid>
+    <div className={styles.containers}>
+      <div className={`${styles.block} ${globalStyles.blockContainer}`}>
+        <Grid align="center">
+          <h2 className={styles.title}>Sign In</h2>
+          <Typography className={styles.text}>
+            Don’t have an account?
+            <NavLink to="/SignUp" id="createAccount" className={styles.textLink}>
+              Create
+            </NavLink>
+          </Typography>
+        </Grid>
+        <form>
           <GeneralInput
-            labelName="email"
             type="email"
+            id="logInEmail"
+            labelName="email"
+            className={styles.input}
             labelWidth={52}
-            id="outlined-basic"
-            className={style.input}
             required
           />
-          <Typography className={style.marginLink}>
-            <Link href="#" id="forgotePassword">
+          <Typography className={styles.smolllink}>
+            <NavLink to="/" id="forgotePassword">
               Forgot password ?
-            </Link>
+            </NavLink>
           </Typography>
           <GenPassInput
             id="LogInPassword"
             labelName="password"
-            className="style.passwordInput"
-            required
+            className={styles.input}
             labelWidth={80}
+            required
           />
           <FormControlLabel
-            className={style.marginChackbox}
+            className={styles.chackbox}
             control={
-              <Checkbox name="checkedB" className={style.colorheckbox} />
+              <Checkbox name="checkedB" className={styles.colorheckbox} />
             }
             label="Remember me"
           />
           <GeneralButton
-            className={style.button}
             type="submit"
+            className={styles.button}
             color="primary"
             variant="contained"
             fullWidth
           >
             Sign In
           </GeneralButton>
-        </Paper>
-      </Box>
-    </Container>
+        </form>
+      </div>
+    </div>
   );
 };
 

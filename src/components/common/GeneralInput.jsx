@@ -9,18 +9,21 @@ export const GeneralInput = ({
   required,
   labelName,
   labelWidth,
+  error = false,
   className = "",
 }) => {
   return (
     <FormControl className={className} variant="outlined">
       <InputLabel htmlFor={id}>
         {required ? <span style={{ color: "red" }}>* </span> : null}
-        {labelName}
+        {error ? <span style={{ color: "red" }}>Error </span> : labelName}
       </InputLabel>
       <OutlinedInput
         id={id}
+        name={id}
         type={type}
-        labelWidth={labelWidth}
+        error={error}
+        labelWidth={error ? 47 : labelWidth}
         required={required ? true : false}
       />
     </FormControl>
