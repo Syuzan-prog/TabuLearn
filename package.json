@@ -22,7 +22,8 @@
     "parcel-bundler": "latest",
     "react": ">=15",
     "react-dom": ">=16.8.0",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "start": "^5.1.0"
   },
   "devDependencies": {
     "babel-plugin-react-css-modules": "^5.0.0",

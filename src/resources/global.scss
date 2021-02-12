@@ -139,8 +139,23 @@ span {
 .line-height-42 {
   line-height: 42px;
 }
-.text-picker {
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.text-lightBlue {
   color: $focus-color;
+}
+
+.letter-spacing{
+  letter-spacing: 0.4px;
+}
+.text-red {
+  color: $input-error-color;
+}
+
+a:hover{
+  text-decoration:underline;
 }
 // .text-black {
 //   color: $text-color-black;

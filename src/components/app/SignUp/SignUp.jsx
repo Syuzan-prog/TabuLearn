@@ -1,9 +1,10 @@
 import React from "react";
+import clsx from "clsx";
 import { Grid, Typography, Link } from "@material-ui/core";
 
-import { GeneralButton } from "../../common/GeneralButton";
-import { GeneralInput } from "../../common/GeneralInput";
-import { GenPassInput } from "../../common/GenPassInput";
+import GeneralButton from "../../common/GeneralButton";
+import GenPassInput from "../../common/GenPassInput";
+import GeneralInput from "../../common/GeneralInput";
 
 import globalStyles from "../../../resources/index";
 import styles from "./SignUp.module.scss";
@@ -12,19 +13,27 @@ import { NavLink } from "react-router-dom";
 const SignUp = () => {
   return (
     <div className={styles.containers}>
-      <div className={`${styles.block} ${globalStyles.blockContainer}`}>
+      <div className={clsx(styles.block, globalStyles.blockContainer)}>
         <Grid align="center">
           <h2 className={styles.title}>Sign Up </h2>
-          <Typography className={styles.text}>
+          <Typography  className={clsx(styles.text, globalStyles["font-weight-normal"])}>
             Already have an account?{" "}
-            <NavLink to="/LogIn" id="alreadyAccount">
+            <NavLink
+              to="/LogIn"
+              id="alreadyAccount"
+              className={clsx(
+                globalStyles["text-lightBlue"],
+                globalStyles["text-decoration-none"],
+                globalStyles["font-weight-500"]
+              )}
+            >
               Login
             </NavLink>
           </Typography>
         </Grid>
         <form>
-          <Grid container spacing={3}>
-            <Grid item xs={12} sm={6} className={styles.padding}>
+          <Grid container spacing={3} className={styles.marginInput}>
+            <Grid item xs={12} sm={6} >
               <GeneralInput
                 type="text"
                 labelName="First Name"
@@ -33,7 +42,7 @@ const SignUp = () => {
                 required
               />
             </Grid>
-            <Grid item xs={12} sm={6} className={styles.padding}>
+            <Grid item xs={12} sm={6}>
               <GeneralInput
                 type="text"
                 labelName="Last Name"
@@ -42,7 +51,7 @@ const SignUp = () => {
                 required
               />
             </Grid>
-            <Grid item xs={12} sm={6} className={styles.padding}>
+            <Grid item xs={12} sm={6}>
               <GeneralInput
                 type="text"
                 labelName="Company"
@@ -51,7 +60,7 @@ const SignUp = () => {
                 required
               />
             </Grid>
-            <Grid item xs={12} sm={6} className={styles.padding}>
+            <Grid item xs={12} sm={6}>
               <GeneralInput
                 type="text"
                 labelName="Position"
@@ -60,7 +69,7 @@ const SignUp = () => {
                 required
               />
             </Grid>
-            <Grid item xs={12} sm={6} className={styles.padding}>
+            <Grid item xs={12} sm={6}>
               <GeneralInput
                 type="text"
                 labelName="Workspace"
@@ -69,7 +78,7 @@ const SignUp = () => {
                 required
               />
             </Grid>
-            <Grid item xs={12} sm={6} className={styles.padding}>
+            <Grid item xs={12} sm={6}>
               <GeneralInput
                 type="email"
                 labelName="Email Address"
@@ -78,7 +87,7 @@ const SignUp = () => {
                 required
               />
             </Grid>
-            <Grid item xs={12} sm={6} className={styles.padding}>
+            <Grid item xs={12} sm={6}>
               <GenPassInput
                 id="SignInPassword"
                 labelName="Password"
@@ -86,12 +95,16 @@ const SignUp = () => {
                 required
                 labelWidth={80}
               />
-              <Typography className={styles.textIncorrect}>
+              <Typography className={clsx(
+                  globalStyles["line-height-20"],
+                  globalStyles["font-size-12"],
+                  styles.textIncorrect
+                )}>
                 * Must contain at least 8 characters, a number, a special
                 character, an uppercase and a lowercase.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={6} className={styles.padding}>
+            <Grid item xs={12} sm={6}>
               <GenPassInput
                 id="signInconfirmPassword"
                 labelName="Confirm Password"
@@ -116,9 +129,17 @@ const SignUp = () => {
               By signing up, I agree to TabuLearn’s
             </Typography>
             <Typography className={styles.textIncorrect}>
-              <Link href="#" id="termsConditions">
+              <NavLink
+                to="/"
+                id="termsConditions"
+                className={clsx(
+                  globalStyles["text-lightBlue"],
+                  globalStyles["text-decoration-none"],
+                  globalStyles["font-size-12"]
+                )}
+              >
                 Terms and Conditions.
-              </Link>
+              </NavLink>
             </Typography>
           </Grid>
         </form>

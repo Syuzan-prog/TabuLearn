@@ -3,9 +3,13 @@
 .containers {
   @extend %flexCenterCenter;
   height: 100vh;
-
+  box-sizing: border-box;
   .block {
-    @include blockStyle($padding: 42px 64px 68px);
+    @include blockStyle($padding: 42px 64px 68px, $width:280px);
+
+    // &:global(.class) {
+
+    // }\
 
     .title {
       @include title();
@@ -13,15 +17,7 @@
 
     .text {
       @include text($letter-spacing: 0.15px);
-      font-weight: 400;
       margin-bottom: 37px;
-    }
-
-    .textLink {
-      @include text($letter-spacing: 0.1px);
-      color: $focus-color;
-      margin-left: 5px;
-      font-weight: 500;
     }
 
     .input {
@@ -31,14 +27,10 @@
     .smolllink {
       margin: 30px 0 10px;
       text-align: right;
-      a {
-        font-size: $micro-text;
-        color: $focus-color;
-      }
     }
 
     .chackbox {
-      margin: 33.5px 0;
+      margin: 23.5px 0;
       .colorheckbox {
         color: $focus-color;
       }

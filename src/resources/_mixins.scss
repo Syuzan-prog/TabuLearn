@@ -85,8 +85,6 @@
   font-size: $intro-text;
   letter-spacing: $letter-spacing;
   color: $text-color-black;
-  font-weight: $font-weight;
-  line-height: $line-height-title;
 }
 
 @mixin text($letter-spacing:0.015em,$font-size:14px) {
@@ -94,5 +92,4 @@
   font-size: $font-size;
   letter-spacing: $letter-spacing;
   color: $text-color-grey;
-  letter-spacing: $letter-spacing;
 }

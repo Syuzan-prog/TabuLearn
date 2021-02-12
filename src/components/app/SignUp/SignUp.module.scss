@@ -3,7 +3,7 @@
 .containers {
   @extend %flexCenterCenter;
   .block {
-    @include blockStyle($width: 720px, $padding: 42px 64px 30px);
+    @include blockStyle($width: 592px, $padding: 26px 64px 12px);
 
     .title {
       @include title();
@@ -11,24 +11,21 @@
 
     .text {
       @include text($letter-spacing: 0.4px);
-      margin-bottom: 35px;
+      margin-bottom: 25px;
     }
+
     .textIncorrect {
-      @include text($letter-spacing: 1px, $font-size: 12px);
+      @include text($letter-spacing: 0.4px,$font-size:12px);
       margin-top: 3px;
     }
-    a {
-      color: $focus-color;
-    }
+
     .marginTop {
       margin-top: 24px;
-    }
-    .padding {
-      padding: 22px;
     }
 
     .input {
       width: 100%;
+      margin-top: 10px;
     }
 
     .button {

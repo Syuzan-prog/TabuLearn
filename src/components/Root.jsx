@@ -1,17 +1,26 @@
-import React from 'react';
-import LogIn from './app/LogIn/LogIn';
-import RecoverPassword from './app/RecoverPassword/RecoverPassword';
-import SignUp from './app/SignUp/Signup';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
-
-const Root = () =>{
-    return(
-        <>
-          <LogIn />
-          <SignUp/>
-          <RecoverPassword />
-        </>
-    )
-}
+const Root = () => {
+  return (
+    <>
+      Root
+      <ul style={{display:'flex'}}>
+        <li>
+          <NavLink to="/SignUp">Sign Up</NavLink>
+        </li>
+        <li>
+          <NavLink to="/LogIn">Log In</NavLink>
+        </li>
+        <li>
+          <NavLink to="/RecoverPassword">Recover Password</NavLink>
+        </li>
+        <li>
+          <NavLink to="/CreateNewPassword">CreateNewPassword</NavLink>
+        </li>
+      </ul>
+    </>
+  );
+};
 
 export default Root;

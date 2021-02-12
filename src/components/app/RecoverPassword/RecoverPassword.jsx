@@ -1,8 +1,9 @@
 import React from "react";
-import { Grid, Paper, Typography, Link } from "@material-ui/core";
+import clsx from "clsx";
+import { Grid, Typography } from "@material-ui/core";
 
-import { GeneralButton } from "../../common/GeneralButton";
-import { GeneralInput } from "../../common/GeneralInput";
+import GeneralButton from "../../common/GeneralButton";
+import GeneralInput from "../../common/GeneralInput";
 
 import globalStyles from "../../../resources/index";
 import styles from "./RecoverPassword.module.scss";
@@ -11,7 +12,7 @@ import { NavLink } from "react-router-dom";
 const RecoverPassword = () => {
   return (
     <div className={styles.containers}>
-      <div className={`${styles.block} ${globalStyles.blockContainer}`}>
+      <div className={clsx(styles.block, globalStyles.blockContainer)}>
         <Grid align="center">
           <h2 className={styles.title}>Recover Password</h2>
           <Typography className={styles.text}>
@@ -37,7 +38,15 @@ const RecoverPassword = () => {
             Sign In
           </GeneralButton>
           <Typography align="center">
-            <NavLink href="./LogIn" id="backToLogin" className={styles.textLink}>
+            <NavLink
+              to="/LogIn"
+              id="backToLogin"
+              className={clsx(
+                styles.textLink,
+                globalStyles["text-lightBlue"],
+                globalStyles["text-decoration-none"]
+              )}
+            >
               Back to Login
             </NavLink>
           </Typography>

@@ -1,7 +1,7 @@
 import React from "React";
 import { Button} from "@material-ui/core";
 
-export const GeneralButton = ({
+const GeneralButton = ({
   children,
   type,
   color,
@@ -21,3 +21,6 @@ export const GeneralButton = ({
     </Button>
   );
 };
+
+
+export default GeneralButton;
